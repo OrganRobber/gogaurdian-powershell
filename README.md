@@ -1,5 +1,4 @@
 # gogaudrian-powershell
-$onoff = read-host -prompt "Gogaurdian On or Off"
 
 $onoffoptions = @(
 
@@ -35,6 +34,29 @@ $clearhostoptions = @(
 "n"
 
 )
+
+if (test-path "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanhE") {
+
+$current = "Off"
+
+clear-host
+
+$onoff = read-host -prompt "Gogaurdian On or Off
+It is currently $current"
+
+}
+Else {
+
+$current = "On"
+
+clear-host
+
+$onoff = read-host -prompt "Gogaurdian On or Off
+It is currently $current"
+
+}
+
+clear-host
 
 $clearhost = read-host -prompt "clear terminal (enter y or n)"
 
