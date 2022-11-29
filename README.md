@@ -23,6 +23,7 @@ rename-item -path "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\
 if ($onoff -notin $onoffoptions) {
 
 Write-Host "ERROR: You must pick exactly on or off, if you put anything else it will be ignored and nothing will happen..."
+
 Write-Host " "
 
 }
@@ -37,35 +38,51 @@ $clearhostoptions = @(
 
 if (test-path "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanhE") {
 
+
 $current = "Off"
 
+
 clear-host
+
 
 $onoff = read-host -prompt "Gogaurdian On or Off
 It is currently $current"
 
+
 }
+
 Else {
+
 
 $current = "On"
 
+
 clear-host
+
 
 $onoff = read-host -prompt "Gogaurdian On or Off
 It is currently $current"
 
+
 }
 
+
 clear-host
+
 
 $clearhost = read-host -prompt "clear terminal (enter y or n)"
 
+
 if ($clearhost -eq "y") {
+
+
 clear-host
+
 
 }
 
 if ($clearhost -notin $clearhostoptions) {
+
 Write-Host "ERROR: You must put exactly y or n, if you put anything else it will be ignored and nothing will happen"
 
 }
