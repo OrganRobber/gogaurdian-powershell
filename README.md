@@ -1,4 +1,6 @@
 # gogaudrian-powershell
+$usernameinsert = read-host -prompt "what is your username"
+
 
 $onoffoptions = @(
 
@@ -10,13 +12,13 @@ $onoffoptions = @(
 
 If ($onoff -eq "on") {
 
-move-item -path "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanh" -destination "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default"; rename-item "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanhE" -newname "haldlgldplgnggkjaafhelgiaglafanh"; get-process -name msedege | stop-process
+move-item -path "C:\Users\\$usernameinsert\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanh" -destination "C:\Users\\$usernameinsert\AppData\Local\Microsoft\Edge\User Data\Default"; rename-item "C:\Users\\$usernameinsert\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanhE" -newname "haldlgldplgnggkjaafhelgiaglafanh"; get-process -name msedege | stop-process
 
 }
 
 if ($onoff -eq "off") {
 
-rename-item -path "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanh" -newname "haldlgldplgnggkjaafhelgiaglafanhE"; move-item -path "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\haldlgldplgnggkjaafhelgiaglafanh" -destination "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\Extensions"; get-process -name msedge | Stop-Process
+rename-item -path "C:\Users\\$usernameinsert\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanh" -newname "haldlgldplgnggkjaafhelgiaglafanhE"; move-item -path "C:\Users\\$usernameinsert\AppData\Local\Microsoft\Edge\User Data\Default\haldlgldplgnggkjaafhelgiaglafanh" -destination "C:\Users\\$usernameinsert\AppData\Local\Microsoft\Edge\User Data\Default\Extensions"; get-process -name msedge | Stop-Process
 
 }
 
@@ -36,7 +38,7 @@ $clearhostoptions = @(
 
 )
 
-if (test-path "C:\Users\\yep\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanhE") {
+if (test-path "C:\Users\\$usernameinsert\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\haldlgldplgnggkjaafhelgiaglafanhE") {
 
 
 $current = "Off"
